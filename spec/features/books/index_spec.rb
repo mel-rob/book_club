@@ -26,22 +26,22 @@ RSpec.describe "book index" do
       expect(page).to have_content(@book_1.title)
       expect(page).to have_content(@book_1.pages)
       expect(page).to have_content(@book_1.publication_year)
-      expect(page).to have_content(@author_1.name)
+      expect(page).to have_link(@author_1.name)
     end
 
     within "#book-#{@book_2.id}" do
       expect(page).to have_content(@book_2.title)
       expect(page).to have_content(@book_2.pages)
       expect(page).to have_content(@book_2.publication_year)
-      expect(page).to have_content(@author_1.name)
+      expect(page).to have_link(@author_1.name)
     end
 
     within "#book-#{@book_5.id}" do
       expect(page).to have_content(@book_5.title)
       expect(page).to have_content(@book_5.pages)
       expect(page).to have_content(@book_5.publication_year)
-      expect(page).to have_content(@author_3.name)
-      expect(page).to have_content(@author_4.name)
+      expect(page).to have_link(@author_3.name)
+      expect(page).to have_link(@author_4.name)
     end
   end
 end
