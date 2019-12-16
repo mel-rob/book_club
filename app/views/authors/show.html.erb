@@ -1,0 +1,7 @@
+<h1><%= @author.name %></h1>
+
+<h3>Books written:</h3>
+<ul><% @author.books.each do |book| %>
+  <li><%= book.title %></li>
+<% end %></ul>
+<h3>Average pages by book: <%= @author.average_pages.to_i %><h3>
